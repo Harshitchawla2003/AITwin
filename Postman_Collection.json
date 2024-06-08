@@ -1,148 +1,312 @@
 {
-    "info": {
-      "name": "Flask API Collection",
-      "_postman_id": "unique-id",
-      "description": "Collection for testing Flask API",
-      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  "info": {
+    "name": "Flask API Collection",
+    "_postman_id": "unique-id",
+    "description": "Collection for testing Flask API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Text Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"your input text\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/text",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "text"
+          ]
+        }
+      },
+      "response": []
     },
-    "item": [
-      {
-        "name": "Text Request",
-        "request": {
-          "method": "POST",
-          "header": [],
-          "body": {
-            "mode": "raw",
-            "raw": "{\n  \"text\": \"your input text\"\n}",
-            "options": {
-              "raw": {
-                "language": "json"
-              }
+    {
+      "name": "Voice Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/voice",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "voice"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "PDF Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
             }
-          },
-          "url": {
-            "raw": "http://localhost:5000/text",
-            "protocol": "http",
-            "host": ["localhost"],
-            "port": "5000",
-            "path": ["text"]
-          }
+          ]
         },
-        "response": []
+        "url": {
+          "raw": "http://localhost:5000/pdf",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "pdf"
+          ]
+        }
       },
-      {
-        "name": "Voice Request",
-        "request": {
-          "method": "POST",
-          "header": [],
-          "url": {
-            "raw": "http://localhost:5000/voice",
-            "protocol": "http",
-            "host": ["localhost"],
-            "port": "5000",
-            "path": ["voice"]
-          }
-        },
-        "response": []
-      },
-      {
-        "name": "PDF Request",
-        "request": {
-          "method": "POST",
-          "header": [],
-          "body": {
-            "mode": "formdata",
-            "formdata": [
-              {
-                "key": "file",
-                "type": "file",
-                "src": ""
-              }
-            ]
-          },
-          "url": {
-            "raw": "http://localhost:5000/pdf",
-            "protocol": "http",
-            "host": ["localhost"],
-            "port": "5000",
-            "path": ["pdf"]
-          }
-        },
-        "response": []
-      },
-      {
-        "name": "Image Request",
-        "request": {
-          "method": "POST",
-          "header": [],
-          "body": {
-            "mode": "raw",
-            "raw": "{\n  \"prompt\": \"your image prompt\"\n}",
-            "options": {
-              "raw": {
-                "language": "json"
-              }
+      "response": []
+    },
+    {
+      "name": "Image Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"prompt\": \"your image prompt\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
             }
-          },
-          "url": {
-            "raw": "http://localhost:5000/image",
-            "protocol": "http",
-            "host": ["localhost"],
-            "port": "5000",
-            "path": ["image"]
           }
         },
-        "response": []
+        "url": {
+          "raw": "http://localhost:5000/image",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "image"
+          ]
+        }
       },
-      {
-        "name": "Audio Request",
-        "request": {
-          "method": "POST",
-          "header": [],
-          "body": {
-            "mode": "formdata",
-            "formdata": [
-              {
-                "key": "file",
-                "type": "file",
-                "src": ""
-              }
-            ]
-          },
-          "url": {
-            "raw": "http://localhost:5000/audio",
-            "protocol": "http",
-            "host": ["localhost"],
-            "port": "5000",
-            "path": ["audio"]
-          }
+      "response": []
+    },
+    {
+      "name": "Audio Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
         },
-        "response": []
+        "url": {
+          "raw": "http://localhost:5000/audio",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "audio"
+          ]
+        }
       },
-      {
-        "name": "Video Request",
-        "request": {
-          "method": "POST",
-          "header": [],
-          "body": {
-            "mode": "formdata",
-            "formdata": [
-              {
-                "key": "file",
-                "type": "file",
-                "src": ""
-              }
-            ]
-          },
-          "url": {
-            "raw": "http://localhost:5000/video",
-            "protocol": "http",
-            "host": ["localhost"],
-            "port": "5000",
-            "path": ["video"]
+      "response": []
+    },
+    {
+      "name": "Video Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": ""
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/video",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "video"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Health Support - Fitness",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"support_type\": \"fitness\",\n    \"text\": \"user input text\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
           }
         },
-        "response": []
-      }
-    ]
-  }
+        "url": {
+          "raw": "http://localhost:5000/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Health Support - Mental Health",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"support_type\": \"mental_health\",\n    \"text\": \"user input text\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Health Support - General Health",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"support_type\": \"general_health\",\n    \"text\": \"user input text\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/health",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Financial Management Support",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"support_type\": \"financial\",\n    \"text\": \"user input text\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5000/financial",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "financial"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Personalized Assistance Support",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"support_type\": \"personalized\",\n    \"text\": \"user input text\"\n}",
+          "options": {
+              "raw": {
+                  "language": "json"
+              }
+          }
+      },
+        "url": {
+          "raw": "http://localhost:5000/personalized",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "personalized"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

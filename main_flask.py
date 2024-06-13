@@ -11,10 +11,12 @@ from PIL import Image  # type:ignore
 import requests  # type:ignore
 from PyPDF2 import PdfReader  # type:ignore
 from dotenv import load_dotenv  # type:ignore
+from flask_cors import CORS
 
 load_dotenv()
 
 app = Flask(__name__)
+CORS(app)
 
 api_key = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=api_key)
